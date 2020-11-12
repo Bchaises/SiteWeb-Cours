@@ -7,26 +7,20 @@ use Illuminate\Http\Request;
 class GamesController extends Controller
 {
 	private $bdd = [
-    		'Cyberpunk',
-    		'Watch_Dogs_Legion',
-    		'Assassin\'s_Creed_Valhalla'
+    		['Cyberpunk', 'Cyberpunk_2077.png', '10 decembre 2020', '2,98c'],
+    		['Watch Dogs : Legion', 'watch-dogs-legion-cover-5.jpg','29 octobre 2020', '985€'],
+    		['Assassin\'s Creed Valhalla','assassins-creed-valhalla-jaquette-1.jpg', '10 novembre 2020','sur internet tu trouveras, ce que tu cherche tu auras.' ]
     	];
 
 
     public function index()
     {
-    	echo "coucou";
+    	return view('games');
     }
 
-    public function send($word)
+    public function jeu($nb)
     {
-    	return view('Cyberpunk' , compact('word') );
-    }
-
-    public function jeux($nb)
-    {
-    	@if ($cyberpunk) {
-    		return view('Cyberpunk');
-    	}
+    	$jeu = $this->bdd[$nb];
+    	return view('infogame', ['base' => $jeu ] );
     }
 }

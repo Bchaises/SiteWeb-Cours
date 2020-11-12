@@ -1,0 +1,22 @@
+body{
+		background-color: #3498db;
+		font-family: arial;
+	}
+.titre{
+	text-align: center;
+}
+.description{
+	background-color: #95a5a6;
+	border:1px #95a5a6 solid;
+	border-radius: 10px;
+	padding: 1em;
+	margin-left: 10em;
+	margin-right: 10em;
+	height: 44.5em;
+}
+.imageGame{
+	float: left;
+}
+.textDescription{
+	margin-left: 32em;
+}

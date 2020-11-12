@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coucou', [GamesController::class, 'index']);
+Route::get('/Games', [GamesController::class, 'index']);
 
-Route::get('Games/Cyberpunk/{word}', [GamesController::class, 'send']);
+Route::get('Games/{nb}', [GamesController::class, 'jeu']);
