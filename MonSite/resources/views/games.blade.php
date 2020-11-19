@@ -8,9 +8,10 @@
 	<h1>Vente de jeux pas cher -99% no fake :</h1>
 
 	<ul>
-		<li>Cyberpunk : 2,98 cent</li>
-		<li>Watch dogs : Legion : 985€</li>
-		<li>Assassin's Creed Valhalla : sur internet tu trouveras, ce que tu cherche tu auras.</li>
+	@foreach($jeux as $jeu)
+		<li>{{ $jeu->libelle }} coute {{ $jeu->prix}}</li>
+	@endforeach
 	</ul>
+
 </body>
 </html>
