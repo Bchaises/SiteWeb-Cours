@@ -20,4 +20,7 @@ Route::get('/', function () {
 
 Route::get('/Games', [GamesController::class, 'index']);
 
+Route::get('Games/create', [GamesController::class, 'create']);
+
 Route::get('Games/{nb}', [GamesController::class, 'jeu']);
+

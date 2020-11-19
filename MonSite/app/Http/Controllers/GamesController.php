@@ -23,4 +23,9 @@ class GamesController extends Controller
     	$jeu = $this->bdd[$nb];
     	return view('infogame', ['base' => $jeu ] );
     }
+
+    public function create()
+    {
+    	return view('create');
+    }
 }
