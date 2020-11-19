@@ -7,6 +7,7 @@ use \App\Models\Jeu;
 
 class GamesController extends Controller
 {
+
     public function index()
     {
         $jeux = Jeu::all();
@@ -16,7 +17,11 @@ class GamesController extends Controller
     public function jeu($nb)
     {
         $jeux = Jeu::find($nb);
-        return view('infogame', compact('jeux') );
+        if($jeux)
+            return view('infogame', compact('jeux') );
+        else
+            $messageErreur = 'La page n\'existe pas...';
+            return view('infogame', compact('messageErreur'));
     }
 
     public function create()

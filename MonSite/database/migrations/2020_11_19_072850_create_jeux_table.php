@@ -19,6 +19,7 @@ class CreateJeuxTable extends Migration
             $table->float('prix');
             $table->string('dateSortie')->nullable();
             $table->string('image')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

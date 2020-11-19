@@ -9,7 +9,7 @@
 
 	<ul>
 	@foreach($jeux as $jeu)
-		<li>{{ $jeu->libelle }} coute {{ $jeu->prix}}</li>
+		<li><a href="/Games/{{$jeu->id}}">{{ $jeu->libelle }}</a> </li>
 	@endforeach
 	</ul>
 
