@@ -30,7 +30,11 @@ class GamesController extends Controller
     }
 
     public function store(){
-        
-        return view('create');
+        $jeu = new Jeu();
+        $jeu->libelle = request('libelle');
+        $jeu->prix = request('prix');
+        $jeu->image = request()->file('filename')->getClientOriginalName();
+        $jeu->save();
+        return redirect('Games');
     }
 }

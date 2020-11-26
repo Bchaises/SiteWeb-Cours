@@ -12,10 +12,10 @@ body{
 	background-color: #95a5a6;
 	border:1px #95a5a6 solid;
 	border-radius: 10px;
-	padding: 1em;
-	margin-left: 10em;
-	margin-right: 10em;
-	height: 44.5em;
+	padding: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 44em;
 }
 .imageGame{
 	float: left;
