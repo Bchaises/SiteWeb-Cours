@@ -25,3 +25,7 @@ Route::get('Games/create', [GamesController::class, 'create']);
 Route::get('Games/{nb}', [GamesController::class, 'show']);
 
 Route::post('Games', [GamesController::class, 'store']);
+
+Route::get('test', function() {
+	return view('test');
+});

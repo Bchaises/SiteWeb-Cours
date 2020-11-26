@@ -26,10 +26,11 @@
 
 	</table>
 		<div class="buttonDescription">
-			<button>Précédent</button>
-			<button>Suivant</button>
+			<a href="{{ $jeux->id-1 }}">Précédent</a>
+			<a href="{{ $jeux->id+1 }}">Suivant</a>
 		</div>
 	</div>
+
 
 	@endif
 @endsection
