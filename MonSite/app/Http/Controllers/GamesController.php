@@ -33,7 +33,14 @@ class GamesController extends Controller
         $jeu = new Jeu();
         $jeu->libelle = request('libelle');
         $jeu->prix = request('prix');
+        $jeu->dateSortie = request('dateSortie');
+
+        // on prend le nom de l'image
         $jeu->image = request()->file('filename')->getClientOriginalName();
+
+        request()->file('filename')->storeAs('public/images', $jeu->image);
+
+        $jeu->description = request('description');
         $jeu->save();
         return redirect('Games');
     }

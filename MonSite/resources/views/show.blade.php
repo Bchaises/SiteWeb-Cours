@@ -5,22 +5,31 @@
 	{{ $messageErreur }}
 	@else
 	<h1 class="titre" >Vous avez choisi {{ $jeux->libelle }} </h1>
-
 	<div class="description">
-		<div class="imageGame">
-			<img src='/storage/images/{{ $jeux->image }}' width="500em">
-		</div>
+	<table>
+	
+		<tr>
+		<th>
+			<div class="imageGame">
+				<img src='/storage/images/{{ $jeux->image }}' width="500em">
+			</div>
+		</th>
 
-		<div class="textDescription">
-			<p>Prix : {{ $jeux->prix }}€</p>
-			<p>Sortie : {{ $jeux->dateSortie }}</p>
-			<p>Description : {{ $jeux->description }}</p>
-		</div>
+		<th>
+			<div class="textDescription">
+				<p>Prix : {{ $jeux->prix }}€</p>
+				<p>Sortie : {{ $jeux->dateSortie }}</p>
+				<p>Description : {{ $jeux->description }}</p>
+			</div>
+		</th>
+		</tr>
 
-		<div>
+	</table>
+		<div class="buttonDescription">
 			<button>Précédent</button>
 			<button>Suivant</button>
 		</div>
 	</div>
+
 	@endif
 @endsection
