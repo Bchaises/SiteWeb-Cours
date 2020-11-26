@@ -11,21 +11,26 @@ class GamesController extends Controller
     public function index()
     {
         $jeux = Jeu::all();
-    	return view('games',compact('jeux'));
+    	return view('index',compact('jeux'));
     }
 
-    public function jeu($nb)
+    public function show($nb)
     {
         $jeux = Jeu::find($nb);
         if($jeux)
-            return view('infogame', compact('jeux') );
+            return view('show', compact('jeux') );
         else
             $messageErreur = 'La page n\'existe pas...';
-            return view('infogame', compact('messageErreur'));
+            return view('show', compact('messageErreur'));
     }
 
     public function create()
     {
     	return view('create');
+    }
+
+    public function store(){
+        
+        return view('create');
     }
 }

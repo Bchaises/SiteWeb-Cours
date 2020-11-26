@@ -22,5 +22,6 @@ Route::get('/Games', [GamesController::class, 'index']);
 
 Route::get('Games/create', [GamesController::class, 'create']);
 
-Route::get('Games/{nb}', [GamesController::class, 'jeu']);
+Route::get('Games/{nb}', [GamesController::class, 'show']);
 
+Route::post('Games', [GamesController::class, 'store']);

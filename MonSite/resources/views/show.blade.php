@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>
-		@if(isset($messageErreur))
-			ErrorPage
-		@else
-			{{ $jeux->libelle }}
-		@endif
-	</title>
-	<link rel="stylesheet" type="text/css" href="/CSS/style_infoGame.css">
-</head>
-<body>
+@extends('layout')
+
+@section('main')
 	@if(isset($messageErreur))
 	{{ $messageErreur }}
 	@else
@@ -24,9 +14,8 @@
 		<div class="textDescription">
 			<p>Prix : {{ $jeux->prix }}€</p>
 			<p>Sortie : {{ $jeux->dateSortie }}</p>
+			<p>Description : {{ $jeux->description }}</p>
 		</div>
 	</div>
 	@endif
-
-</body>
-</html>
+@endsection

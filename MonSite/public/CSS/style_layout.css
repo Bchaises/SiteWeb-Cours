@@ -2,6 +2,9 @@ body{
 		background-color: #3498db;
 		font-family: arial;
 	}
+.titre_layout{
+	text-align: center;
+}
 .titre{
 	text-align: center;
 }
@@ -19,4 +22,12 @@ body{
 }
 .textDescription{
 	margin-left: 32em;
+}
+.footer_layout{
+	text-align: center;
+}
+.form_create{
+	text-align: center;
+	margin-top: 20%;
+	margin-bottom: 20%;
 }
