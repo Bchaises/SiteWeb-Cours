@@ -17,15 +17,14 @@ use App\Http\Controllers\GamesController;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/Games', [GamesController::class, 'index']);
-
-Route::get('Games/create', [GamesController::class, 'create']);
-
-Route::get('Games/{nb}', [GamesController::class, 'show']);
-
-Route::post('Games', [GamesController::class, 'store']);
-
-Route::get('test', function() {
+Route::get('/test', function() {
 	return view('test');
 });
+Route::get('/Games', [GamesController::class, 'index']);
+Route::get('Games/create', [GamesController::class, 'create']);
+Route::get('Games/{nb}', [GamesController::class, 'show']);
+Route::post('Games', [GamesController::class, 'store']);
+Route::get('Games/{nb}/edit', [GamesController::class, 'edit']);
+Route::patch('/Games/{nb}', [GamesController::class, 'update']);
+Route::delete('/Games/{nb}', [GamesController::class, 'destroy']);
+
