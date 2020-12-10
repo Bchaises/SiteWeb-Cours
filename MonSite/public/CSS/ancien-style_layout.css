@@ -1,0 +1,31 @@
+body{
+		background-color: #3498db;
+		font-family: arial;
+	}
+.titre_layout{
+	text-align: center;
+}
+.titre{
+	text-align: center;
+}
+.textDescription{
+	text-align: left;
+	text-align: justify;
+	margin-left: 2%;
+}
+.description{
+	background-color: #95a5a6;
+	border:1px #95a5a6 solid;
+	border-radius: 10px;
+	padding: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.footer_layout{
+	text-align: center;
+}
+.form_create{
+	text-align: center;
+	margin-top: 20%;
+	margin-bottom: 20%;
+}

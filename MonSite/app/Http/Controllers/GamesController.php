@@ -14,9 +14,8 @@ class GamesController extends Controller
     	return view('index',compact('jeux'));
     }
 
-    public function show($nb)
+    public function show(Jeu $jeu)
     {
-        $jeu = Jeu::find($nb);
         if($jeu)
             return view('show', compact('jeu') );
         else
@@ -45,24 +44,21 @@ class GamesController extends Controller
         return redirect('Games');
     }
 
-    public function edit($nb){
-        $jeu = Jeu::find($nb);
+    public function edit(Jeu $jeu){
         return view('edit', compact('jeu'));
     }
 
-    public function update($nb){
-        // Récupérer la ressource à l'id associé
-        $jeu = Jeu::find($nb);
+    public function update(Jeu $jeu){
         // Mettre à jour les données de cette ressource
         $jeu->libelle = request('libelle');
         $jeu->prix = request('prix');
         $jeu->dateSortie = request('dateSortie');
         $jeu->save();
-        return redirect('/Games/'.$nb);
+        return redirect('/Games/'.$jeu);
     }
 
-    public function destroy($nb){
-        Jeu::destroy($nb);
+    public function destroy(Jeu $jeu){
+        Jeu::destroy($jeu);
         return redirect('/Games');
     }
 }
